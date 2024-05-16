@@ -1,0 +1,5 @@
+openpyxl
+py2neo
+ltp
+PyPDF2
+torch
