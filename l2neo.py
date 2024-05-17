@@ -1,4 +1,4 @@
-from py2neo import Node, Graph, Relationship, NodeMatcher, Subgraph
+from py2neo import Node, Graph, Relationship
 import torch
 from ltp import LTP
 
@@ -18,12 +18,12 @@ class l2neo:
             link = Graph("http://localhost:7474", auth=("neo4j", "174235"))
             self.graph = link
 
-            # 查询所有用户节点的名称
-            query = "MATCH (u:CoreBook) RETURN u.name AS name"
-            result = self.graph.run(query)
-            if self.name in  [record["name"] for record in result]:
-                print("重复内容，跳过")
-                return
+            # # 查询所有用户节点的名称
+            # query = "MATCH (u:CoreBook) RETURN u.name AS name"
+            # result = self.graph.run(query)
+            # if self.name in  [record["name"] for record in result]:
+            #     print("重复内容，跳过")
+            #     return
 
             # 实体抽取+去重
             self.list_ner = ner_extract(self.syz)
