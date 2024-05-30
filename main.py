@@ -25,7 +25,8 @@ if __name__ == '__main__':
     result = graph.run(query)
     al = [record["name"] for record in result]
 
-    folder_path = r"F:\neoSQL\文献"
+    # folder_path = r"F:\neoSQL\文献"
+    folder_path = r"F:\neoSQL\规范"
     a = Maine()
 
     unf = []

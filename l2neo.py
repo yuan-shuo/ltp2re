@@ -55,7 +55,7 @@ class l2neo:
         self.core = Node("CoreBook", name=self.name)
         self.graph.create(self.core)
         for i in range(len(self.list_ner)):
-            node = Node(self.list_type[i], name=self.list_ner[i])
+            node = Node(self.list_type[i], name=self.list_ner[i], belong=self.name)
             # 绘制代码，debug时注释掉就行
             self.graph.create(node)
             # 链接主节点
